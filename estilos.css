@@ -1,0 +1,544 @@
+
+/*
+
+    ! 1. Posicionamiento
+    ! 2. Modelo Caja (Box Model)
+    ! 3. Tipografía
+    ! 4. Visuales
+    ! 5. Otros
+
+*/
+
+:root {
+    /*Colores*/
+    --fondo-principal: #FFFFFF;
+    --fondo-secundario: #323443;
+    --fondo-titulos: #6c6d67;/*#BA1F1F;*/
+    --fondo-menu: #201E1C;
+    --fondo-carta: #282623;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'DM Sans','Abril Fatface';
+}
+
+.logo p {
+    font-size: 2rem;
+    color: var(--fondo-titulos);
+}
+
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    min-width: 320px;
+    height: 334px;
+    text-align: center;
+
+    background: var(--fondo-secundario);
+}
+
+header img {
+    width: 25px;
+    height: 25px;
+
+    margin-top: 60px;
+    align-self: center;
+}
+
+.header--title-container{
+    
+    width: 90%;
+    min-width: 285px;
+    max-width: 900px;
+    height: 210px;
+    margin-top: 50px;
+
+    text-align: center;
+
+    align-self: center; /*La usamos con el flex*/
+
+}
+
+.header--title-container h1 {
+
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+
+    color: var(--fondo-principal);
+}
+
+.header--title-container p {
+
+    margin-top: 25px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+
+    color: var(--fondo-titulos);
+}
+
+.header--title-container .header--button {
+    position: absolute;
+
+    /*CENTRAR DIV*/
+    
+    /*Forma 1*/
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+
+    
+    /*Forma 2*/
+    
+    /*left: calc(50% - 100px);*/
+
+
+    top: 270px;
+    display: block;
+    margin-top: 35px;
+    padding: 15px;
+
+    width: 229px;
+    
+    height: 48px;
+    background-color: var(--fondo-principal);
+
+    /*Sombra*/
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--fondo-menu);
+}
+
+.header--button span {
+    display: inline-block;
+    width: 13px;
+    height: 8px;
+    margin-left: 10px;
+    background-image: url('./images/flecha.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main {
+    width: 100%;
+    height: auto;
+    background-color: var(--fondo-principal);
+}
+
+.main-exchange-container {
+    width: 100%;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 30px;
+
+    
+
+    text-align: center;
+}
+
+.main-exchange-container--title {
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+
+    margin-right: auto;
+    margin-left: auto;
+
+    padding-bottom: 30px;
+}
+
+.main-exchange-container--title h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--fondo-titulos);
+}
+
+.main-exchange-container .backgroundImg {
+    width: 200px;
+    height: 100px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background-image: url(./images/mapa.jpg);
+
+    background-size: cover;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+
+}
+
+
+.main-carta-container {
+    position: absolute;
+    
+    /* width: 324px; */
+    width: 100%;
+    height: 760px;
+    left: 0px;
+    top:  650px;
+
+    background-color: var(--fondo-menu);
+
+}
+
+.main-carta--title {
+    color: var(--fondo-principal);
+}
+
+.main-carta--title h2 {
+    position: absolute;
+    width: 92px;
+    height: 26px;
+    left: calc(50% - 92px/2);
+    top: calc(50% - 26px/2 - 342px);
+
+    /* H1 Mobile */
+
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 26px;
+    /* identical to box height, or 108% */
+
+    text-align: center;
+}
+
+.main-carta--title p {
+    position: absolute;
+    width: 238px;
+    height: 18px;
+    left: calc(50% - 238px/2 - 2px);
+    top: calc(50% - 18px/2 - 312px);
+
+    /* H2 Mobile */
+
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height, or 129% */
+
+    text-align: center;
+}
+
+.carta-general {
+    position: absolute;
+    width: 288px;
+    height: 200px;
+    left: 16px;
+
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+
+    background: var(--fondo-carta);
+}
+
+.carta-general .titulo {
+    position: absolute;
+    width: 154px;
+    height: 18px;
+    left: 6px;
+
+    top: 13px;
+
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: var(--fondo-titulos);
+}
+
+.carta-general .precio {
+    position: absolute;
+    width: 102px;
+    height: 18px;
+    left: 178px;
+    
+    top: 125px;
+
+    /* H2 Mobile */
+
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height, or 129% */
+
+    text-align: center;
+
+    color: var(--fondo-titulos)
+}
+
+.carta-general .texto{
+    position: absolute;
+    width: 106px;
+    height: 68px;
+    left: calc(50% - 106px/2 + 85px);
+
+    top: calc(50% - 68px/2 - 17px);
+
+    /* H2 Mobile */
+
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    /* or 129% */
+
+    text-align: center;
+
+    color: var(--fondo-principal);
+}
+
+.carta-general .imagen {
+    position: absolute;
+    width: 162px;
+    height: 135px;
+    left: 6px;
+
+    top: 49px;
+
+    background-size: cover;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+}
+
+/*!CARTA 1*/
+
+.carta-1 {
+    top: 99px;
+}
+
+.carta-1 .imagen {
+    background-image: url(./images/1-4.jpg);
+}
+
+/*!CARTA 2*/
+
+.carta-2 {
+    top: 321px;
+}
+
+.carta-2 .imagen {
+    background-image: url(./images/1-2.jpg);
+}
+
+/*!CARTA 3*/
+
+.carta-3 {
+    top: 543px;
+}
+
+.carta-3 .imagen {
+    background-image: url(./images/1pollo.jpeg);
+}
+
+
+/*? FRASE */
+
+.main-frase-container {
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    left: 0px;
+    top: 1410px;
+    /* background: var(--fondo-principal); */
+    background: var(--fondo-principal);
+}
+
+.main-frase-container .container {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+    border: 5px solid black;
+    border-radius: 30px;
+    background: var(--fondo-principal);
+}
+
+.main-frase-container .container .imagen {
+    position: absolute;
+    width: 112px;
+    height: 90px;
+
+    top: 40px;
+
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+
+    background-image: url(./images/polloBrasa.svg);
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main-frase-container .container .texto {
+    position: absolute;
+    width: 199px;
+    height: 74px;
+    
+    top: 150px;
+    
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+
+    color: var(--fondo-menu);
+}
+
+.main-frase-container .container .frase {
+    position: absolute;
+    width: 174px;
+    height: 18px;
+    top: 230px;
+
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+
+    color: var(--fondo-titulos);
+}
+
+.main-footer-container {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    top: 1810px;
+
+    background: var(--fondo-secundario);
+}
+
+.main-footer-container .contenedor {
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-evenly;
+
+    height: 100%;
+    padding: 15px;
+}
+
+.main-footer-container .ubicacion {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+
+    color: var(--fondo-principal);
+}
+
+.main-footer-container .imagen {
+    width: 32px;
+    height: 32px;
+
+    background-image: url(./images/pollo.svg);
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main-footer-container .slogan {
+    font-size: 18px;
+
+    font-weight: bold;
+    margin-left: 10px;
+    color: var(--fondo-principal);
+}
+
+.logo_footer {
+    display: flex;
+    align-items: center;
+}
+
+/*? RESPONSIVE DESIGN*/
+
+/*TODO: Entre 320px y 374px */
+@media screen and (min-width: 320px) and (max-width: 374px) {
+
+    .main-footer-container .contenedor {
+        flex-direction: column;
+    }
+
+    .main-frase-container .container {
+        width: 270px;
+        height: 300px;
+    }
+
+}
+
+/*TODO: Entre 375px y 424px */
+@media screen and (min-width: 375px) and (max-width: 424px) {
+
+    .main-footer-container .contenedor {
+        flex-direction: column;
+    }
+
+}
+
+/*TODO: Entre 425px y 578px */
+@media screen and (min-width: 425px) and (max-width: 578px) {
+
+    .main-footer-container .contenedor {
+        flex-direction: column;
+    }
+
+}
